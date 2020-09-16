@@ -2,7 +2,7 @@ require 'json'
 package = JSON.parse(File.read('../package.json'))
 
 Pod::Spec.new do |s|
-  s.name                      = "Permission-PhotoLibrary"
+  s.name                      = "Permission-PhotoLibraryAddOnly"
   s.dependency                  "RNPermissions"
 
   s.version                   = package["version"]
@@ -17,6 +17,5 @@ Pod::Spec.new do |s|
   s.requires_arc              = true
 
   s.source                    = { :git => package["repository"]["url"], :tag => s.version }
-  s.source_files              = "PhotoLibrary/*.{h,m}"
-  s.frameworks                = "PhotosUI"
+  s.source_files              = "PhotoLibraryAddOnly/*.{h,m}"
 end

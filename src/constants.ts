@@ -44,6 +44,7 @@ export const IOS = Object.freeze({
   MICROPHONE: 'ios.permission.MICROPHONE' as const,
   MOTION: 'ios.permission.MOTION' as const,
   PHOTO_LIBRARY: 'ios.permission.PHOTO_LIBRARY' as const,
+  PHOTO_LIBRARY_ADD_ONLY: 'ios.permission.PHOTO_LIBRARY_ADD_ONLY' as const,
   REMINDERS: 'ios.permission.REMINDERS' as const,
   SIRI: 'ios.permission.SIRI' as const,
   SPEECH_RECOGNITION: 'ios.permission.SPEECH_RECOGNITION' as const,
@@ -57,4 +58,5 @@ export const RESULTS = Object.freeze({
   DENIED: 'denied' as const,
   BLOCKED: 'blocked' as const,
   GRANTED: 'granted' as const,
+  LIMITED: 'limited' as const,
 });

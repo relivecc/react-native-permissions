@@ -18,6 +18,7 @@ const RNP: {
     options: NotificationOption[],
   ) => Promise<NotificationsResponse>;
   openSettings: () => Promise<true>;
+  presentLimitedLibraryPicker: () => Promise<true>;
   check: (permission: Permission) => Promise<PermissionStatus>;
   request: (
     permission: Permission,
@@ -27,6 +28,10 @@ const RNP: {
 
 async function openSettings(): Promise<void> {
   await RNP.openSettings();
+}
+
+async function presentLimitedLibraryPicker(): Promise<void> {
+  await RNP.presentLimitedLibraryPicker();
 }
 
 async function check(permission: Permission): Promise<PermissionStatus> {
@@ -95,4 +100,5 @@ export const module: Contract = {
   requestNotifications,
   checkMultiple,
   requestMultiple,
+  presentLimitedLibraryPicker,
 };

@@ -54,6 +54,9 @@ typedef NS_ENUM(NSInteger, RNPermission) {
 #if __has_include("RNPermissionHandlerLocationFullAccuracy.h")
   RNPermissionLocationFullAccuracy = 17,
 #endif
+#if __has_include("RNPermissionHandlerPhotoLibraryAddOnly.h")
+  RNPermissionAppPhotoLibraryAddOnly = 17,
+#endif
 };
 
 @interface RCTConvert (RNPermission)
@@ -65,6 +68,7 @@ typedef enum {
   RNPermissionStatusRestricted = 2,
   RNPermissionStatusDenied = 3,
   RNPermissionStatusAuthorized = 4,
+  RNPermissionStatusLimited = 5,
 } RNPermissionStatus;
 
 @protocol RNPermissionHandler <NSObject>
