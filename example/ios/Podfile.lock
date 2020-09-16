@@ -84,6 +84,8 @@ PODS:
     - RNPermissions
   - Permission-LocationAlways (2.2.0):
     - RNPermissions
+  - Permission-LocationFullAccuracy (2.2.0):
+    - RNPermissions
   - Permission-LocationWhenInUse (2.2.0):
     - RNPermissions
   - Permission-MediaLibrary (2.2.0):
@@ -366,6 +368,7 @@ DEPENDENCIES:
   - Permission-Contacts (from `../node_modules/react-native-permissions/ios/Contacts.podspec`)
   - Permission-FaceID (from `../node_modules/react-native-permissions/ios/FaceID.podspec`)
   - Permission-LocationAlways (from `../node_modules/react-native-permissions/ios/LocationAlways.podspec`)
+  - Permission-LocationFullAccuracy (from `../node_modules/react-native-permissions/ios/LocationFullAccuracy.podspec`)
   - Permission-LocationWhenInUse (from `../node_modules/react-native-permissions/ios/LocationWhenInUse.podspec`)
   - Permission-MediaLibrary (from `../node_modules/react-native-permissions/ios/MediaLibrary.podspec`)
   - Permission-Microphone (from `../node_modules/react-native-permissions/ios/Microphone.podspec`)
@@ -442,6 +445,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-permissions/ios/FaceID.podspec"
   Permission-LocationAlways:
     :path: "../node_modules/react-native-permissions/ios/LocationAlways.podspec"
+  Permission-LocationFullAccuracy:
+    :path: "../node_modules/react-native-permissions/ios/LocationFullAccuracy.podspec"
   Permission-LocationWhenInUse:
     :path: "../node_modules/react-native-permissions/ios/LocationWhenInUse.podspec"
   Permission-MediaLibrary:
@@ -531,6 +536,7 @@ SPEC CHECKSUMS:
   Permission-Contacts: 2c9a8932f30582ed175551b7baa8d0344837c53b
   Permission-FaceID: 3106c7006b85a3baec8081ba17ee1f39a16ca9e0
   Permission-LocationAlways: 8026796fd0fc8d735adbd84cd1ae28a4fb22ac22
+  Permission-LocationFullAccuracy: 249810174a64bdf3d80faedd644d260b59861c9b
   Permission-LocationWhenInUse: eba08412fee84a8ac5140472d83aef2427a5befe
   Permission-MediaLibrary: d8dcc62b06bce4053adcfe53bceef73eef9d483a
   Permission-Microphone: 06462b9d979ada12095bcff8d5ee1aeeeaf20b5d

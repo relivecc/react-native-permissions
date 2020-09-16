@@ -88,6 +88,11 @@ Then update your `Info.plist` with wanted permissions usage descriptions:
   <string>YOUR TEXT</string>
   <key>NSLocationWhenInUseUsageDescription</key>
   <string>YOUR TEXT</string>
+  <key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>YOUR-PURPOSE-KEY</key>
+		<string>YOUR TEXT</string>
+	</dict>
   <key>NSMicrophoneUsageDescription</key>
   <string>YOUR TEXT</string>
   <key>NSMotionUsageDescription</key>
@@ -390,6 +395,7 @@ PERMISSIONS.IOS.CONTACTS;
 PERMISSIONS.IOS.FACE_ID;
 PERMISSIONS.IOS.LOCATION_ALWAYS;
 PERMISSIONS.IOS.LOCATION_WHEN_IN_USE;
+PERMISSIONS.IOS.LOCATION_FULL_ACCURACY;
 PERMISSIONS.IOS.MEDIA_LIBRARY;
 PERMISSIONS.IOS.MICROPHONE;
 PERMISSIONS.IOS.MOTION;
@@ -477,9 +483,13 @@ type Rationale = {
   buttonNeutral?: string;
 };
 
+type FullAccuracyOptionsIOS {
+  temporaryPurposeKey: string
+}
+
 function request(
   permission: string,
-  rationale?: Rationale,
+  options?: Rationale | FullAccuracyOptionsIOS,
 ): Promise<PermissionStatus>;
 ```
 
@@ -499,7 +509,7 @@ Check notifications permission status and get notifications settings values.
 
 ```ts
 interface NotificationSettings {
-  // properties only availables on iOS
+  // properties only available on iOS
   // unavailable settings will not be included in the response object
   alert?: boolean;
   badge?: boolean;
@@ -541,7 +551,7 @@ type NotificationOption =
   | 'provisional';
 
 interface NotificationSettings {
-  // properties only availables on iOS
+  // properties only available on iOS
   // unavailable settings will not be included in the response object
   alert?: boolean;
   badge?: boolean;
